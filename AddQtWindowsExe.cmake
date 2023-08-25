@@ -204,7 +204,7 @@ function(add_qt_windows_exe TARGET)
       add_custom_target(${QT_WINDOWS_APP_DEPLOY_NAME}
         ${QT_WINDOWS_ALL}
         DEPENDS ${TARGET} ${ARGWIN_DEPENDS}
-        COMMAND ${QT_WINDOWS_QT_ROOT}/bin/windeployqt
+        COMMAND ${QT_WINDOWS_QT_ROOT}/bin/windeployqt6 -sql -xml -serialport
         ${QT_WINDOWS_APP_QML_DIR}
         ${QT_WINDOWS_APP_NO_TRANSLATIONS}
         ${QT_WINDOWS_APP_NO_PLUGINS}
